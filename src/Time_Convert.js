@@ -14,20 +14,11 @@
 // Output: 0:45
 
 const timeConvert = num => {
-  let hours = 0;
-  let minutes = 0;
-
-  for (let i = 1; i <= num; i++) {
-    minutes = minutes + 1;
-
-    if (minutes % 60 === 0) {
-      hours = hours + 1;
-      minutes = 0;
-    }
-  }
-
+  const hours = Math.floor(num / 60);
+  const minutes = num % 60;
   const result = `${hours}:${minutes}`;
+
   return result;
 };
 
-console.log(timeConvert(60));
+console.log(timeConvert(70));
